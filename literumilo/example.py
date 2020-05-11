@@ -5,14 +5,16 @@
 #
 # Cleve (Klivo) Lendon, 2020-05-11
 
-import os
-
+import sys, os
 from literumilo import check_word
-from literumilo import analyze_string
 from literumilo import analyze_file
+from literumilo import analyze_string
+from literumilo import x_to_accent
 
 TEXT = "La Makul-likaono aŭ Hiena likaono, Lycaon pictus, estas kanisedo troviĝanta nur en Afriko."
 FILENAME = "example.txt"
+
+print(x_to_accent("cxirkaux"))
 
 def good_or_bad(result):
     """
