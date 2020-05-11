@@ -10,7 +10,7 @@
 import os, sys
 import enum
 
-import .literumilo_utils
+from .literumilo_utils import x_to_accent
 from .literumilo_entry import *
 
 DICTIONARY_FN = 'data/vortaro.tsv'
@@ -57,7 +57,7 @@ def make_dictionary(lines):
             continue
 
         # Make a key.
-        morpheme_key = literumilo_utils.x_to_accent(parameter_array[0]).lower().replace(".", "")
+        morpheme_key = x_to_accent(parameter_array[0]).lower().replace(".", "")
         entry = EspDictEntry(parameter_array)
         # Exclude any lines with a flag of 'X'
         flag = parameter_array[0]
