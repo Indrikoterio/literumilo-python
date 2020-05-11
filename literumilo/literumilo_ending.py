@@ -6,7 +6,7 @@
 # Author: Klivo Lendon
 # Last edit date: 2020-05-01
 
-from literumilo_entry import *
+from .literumilo_entry import *
 
 # Ending
 # Defines an Esperanto grammatical ending, and its part of speech.
