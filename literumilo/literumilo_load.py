@@ -7,7 +7,7 @@
 # Last edit date: 2020-05-01
 #
 
-import os, sys, re
+import os, sys
 import enum
 
 import literumilo_utils
@@ -78,7 +78,9 @@ def load_dictionary():
     and produce a dictionary, indexed by morpheme.
     """
     lines = []
-    with open(DICTIONARY_FN, 'r') as fp:
+    this_path = os.path.abspath(os.path.dirname(__file__))
+    dict_path = os.path.join(this_path, DICTIONARY_FN)
+    with open(dict_path, 'r') as fp:
         for line in fp:
             lines.append(line.strip())
     return make_dictionary(lines)
