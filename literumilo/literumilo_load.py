@@ -10,10 +10,8 @@
 import os, sys
 import enum
 
-import literumilo_utils
-import literumilo_entry
-
-from literumilo_entry import *
+import .literumilo_utils
+from .literumilo_entry import *
 
 DICTIONARY_FN = 'data/vortaro.tsv'
 NL = '\n'
