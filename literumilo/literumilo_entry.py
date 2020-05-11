@@ -9,7 +9,7 @@
 
 import sys
 
-import literumilo_utils
+import .literumilo_utils
 import enum
 
 # Part of Speech
