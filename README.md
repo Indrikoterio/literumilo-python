@@ -43,9 +43,10 @@ The program will output the text to standard out, with known Esperanto words div
 
 ## Tests
 
-To run unit tests, run the following command:
+To run unit tests, run the following commands:
 
-$ `python3 -m unittest tests/test_literumilo.py`
+$ `cd literumilo`  
+$ `python3 -m unittest tests/test_literumilo.py`  
 
 The output should be:
 
