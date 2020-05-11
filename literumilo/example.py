@@ -5,12 +5,14 @@
 #
 # Cleve (Klivo) Lendon, 2020-05-11
 
+import os
+
 from literumilo import check_word
 from literumilo import analyze_string
 from literumilo import analyze_file
 
 TEXT = "La Makul-likaono aŭ Hiena likaono, Lycaon pictus, estas kanisedo troviĝanta nur en Afriko."
-FILE = "data/example.txt"
+FILENAME = "example.txt"
 
 def good_or_bad(result):
     """
@@ -38,8 +40,11 @@ print(result)
 result = analyze_string(TEXT, False)
 print(result)
 
-result = analyze_file(FILE, True)
+script_path = os.path.abspath(os.path.dirname(__file__))
+file_path = os.path.join(script_path, FILENAME)
+
+result = analyze_file(file_path, True)
 print(result)
 
-result = analyze_file(FILE, False)
+result = analyze_file(file_path, False)
 print(result)
