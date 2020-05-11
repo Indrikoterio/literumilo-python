@@ -8,13 +8,13 @@
 #
 
 import os, sys
-from literumilo_entry import *
-from literumilo_ending import *
-from literumilo_suffix import check_suffix
-from literumilo_morpheme_list import MorphemeList
-from literumilo_scan_morphemes import scan_morphemes
-from literumilo_utils import *
-from literumilo_load import load_dictionary
+from .literumilo_entry import *
+from .literumilo_ending import *
+from .literumilo_suffix import check_suffix
+from .literumilo_morpheme_list import MorphemeList
+from .literumilo_scan_morphemes import scan_morphemes
+from .literumilo_utils import *
+from .literumilo_load import load_dictionary
 
 esperanto_dictionary = load_dictionary()
 
