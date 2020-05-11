@@ -15,7 +15,7 @@ import os, sys
 from .literumilo_utils import is_word_char, x_to_accent
 from .literumilo_check_word import check_word
 
-HOW_TO_USE = """\nLiterumilo   version: 1.0.2\n
+HOW_TO_USE = """\nLiterumilo   version: 1.0.3\n
     ----- (Esperanto sekvas.)\n
     This program is a spell checker and morphological analyzer for Esperanto.\n
     To list misspelled words from a file: python literumilo.py file.txt
