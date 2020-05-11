@@ -10,7 +10,7 @@ from literumilo import analyze_string
 from literumilo import analyze_file
 
 TEXT = "La Makul-likaono aŭ Hiena likaono, Lycaon pictus, estas kanisedo troviĝanta nur en Afriko."
-FILE = "example.txt"
+FILE = "data/example.txt"
 
 def good_or_bad(result):
     """
