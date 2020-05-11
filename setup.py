@@ -8,7 +8,7 @@ with open("README.md", "r") as fin:
 
 setuptools.setup(
     name = "literumilo",
-    version = "1.0.1",
+    version = "1.0.2",
     author = "Cleve (Klivo) Lendon",
     author_email = "indriko@yahoo.com",
     description = "A spell checker and morphological analyzer for Esperanto.",
@@ -16,12 +16,9 @@ setuptools.setup(
     long_description_content_type = "text/markdown",
     url="https://github.com/Indrikoterio/literumilo",
     packages = setuptools.find_packages(),
-    package_data = {'tests': ['test.txt'], 'data': ['vortaro.tsv', 'example.txt']},
+    package_data = {'literumilo': ['example.txt', 'tests/test.txt', 'data/vortaro.tsv']},
     include_package_data = True,
-    py_modules = ['literumilo', 'literumilo_check_word', 'literumilo_ending', \
-                             'literumilo_entry', 'literumilo_load', 'literumilo_morpheme_list', \
-                             'literumilo_scan_morphemes', 'literumilo_suffix', 'literumilo_utils',  \
-                             'example'],
+    py_modules = ['literumilo'],
     classifiers = [
         "Programming Language :: Python :: 3",
         "License :: Public Domain",
