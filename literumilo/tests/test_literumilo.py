@@ -14,7 +14,9 @@ import unittest
 from literumilo import analyze_file
 from literumilo_check_word import check_word
 from literumilo_utils import x_to_accent
- 
+
+FILENAME = "test.txt"
+
 class TestLiterumilo(unittest.TestCase):
  
     def test_check_word(self):
@@ -34,10 +36,14 @@ class TestLiterumilo(unittest.TestCase):
         self.assertEqual(result.word, 'n-r.ojn')
 
     def test_analyze_file(self):
-        result = analyze_file('tests/test.txt', False)
+
+        script_path = os.path.abspath(os.path.dirname(__file__))
+        file_path = os.path.join(script_path, FILENAME)
+
+        result = analyze_file(file_path, False)
         self.assertEqual(result, 'vortto\n')
 
-        result = analyze_file('tests/test.txt', True)
+        result = analyze_file(file_path, True)
         self.assertTrue("mis.liter.um.it.a" in result)
 
     # end of test_check_word()
