@@ -12,8 +12,7 @@
 from __future__ import print_function
 
 import os, sys
-from literumilo_utils import is_word_char
-from literumilo_utils import x_to_accent
+from literumilo_utils import is_word_char, x_to_accent
 from literumilo_check_word import check_word
 
 HOW_TO_USE = """\nLiterumilo   version: 1.0.2\n
