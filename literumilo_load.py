@@ -15,7 +15,7 @@ import literumilo_entry
 
 from literumilo_entry import *
 
-DICTIONARY_FN = 'vortaro.tsv'
+DICTIONARY_FN = 'data/vortaro.tsv'
 NL = '\n'
 
 def make_dictionary(lines):
