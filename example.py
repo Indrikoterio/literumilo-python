@@ -19,7 +19,7 @@ def good_or_bad(result):
         AnalysisResult
     AnalysisResult has two fields:
         word (str)
-        valid (bool(
+        valid (bool)
     """
     if result.valid:
         print("OK> {}".format(result.word))
