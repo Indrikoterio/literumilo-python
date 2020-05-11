@@ -9,7 +9,7 @@
 # Last edit date: 2020-05-10
 #
 
-import unittest
+import unittest, os
 
 from literumilo import analyze_file
 from literumilo_check_word import check_word
