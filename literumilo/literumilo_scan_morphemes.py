@@ -15,7 +15,7 @@
 # Last edit date: 2020-05-01
 #
 
-from literumilo_entry import *
+from .literumilo_entry import *
 
 
 def check_bo(index, morpheme_list):
