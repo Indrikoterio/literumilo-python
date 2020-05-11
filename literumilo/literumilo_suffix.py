@@ -13,7 +13,7 @@
 # Last edit date: 2020-05-02
 #
 
-from literumilo_entry import *
+from .literumilo_entry import *
 
 def check_acx(index, morpheme_list):
     """Check whether suffix -aĉ is valid. Aĉ means bad (quality), unpleasant, ugly.
