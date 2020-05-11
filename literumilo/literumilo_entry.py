@@ -9,7 +9,7 @@
 
 import sys
 
-import .literumilo_utils
+from .literumilo_utils import *
 import enum
 
 # Part of Speech
@@ -322,7 +322,7 @@ class EspDictEntry:
     def __init__(self, data_array):
         """The parameter 'data_array' contains 9 dictionary parameters as strings.
         """
-        morpheme = literumilo_utils.x_to_accent(data_array[0])
+        morpheme = x_to_accent(data_array[0])
         self.morpheme = morpheme
         self.length = len(morpheme)
         self.capitalization = self.get_capitalization(morpheme)
