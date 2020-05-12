@@ -6,35 +6,29 @@
 # Cleve (Klivo) Lendon, 2020-05-11
 
 import sys, os
+
+#import literumilo
 from literumilo import check_word
 from literumilo import analyze_file
 from literumilo import analyze_string
 from literumilo import x_to_accent
 
-TEXT = "La Makul-likaono aŭ Hiena likaono, Lycaon pictus, estas kanisedo troviĝanta nur en Afriko."
+TEXT = "Birdoj (Aves) estas klaso de vertebruloj kun ĉirkaŭ 9 ĝis 10 mil vivantaj specioj."
 FILENAME = "example.txt"
 
 print(x_to_accent("cxirkaux"))
 
-def good_or_bad(result):
-    """
-    Formats the output of check_word.
-    Params:
-        AnalysisResult
-    AnalysisResult has two fields:
-        word (str)
-        valid (bool)
-    """
-    if result.valid:
-        print("OK> {}".format(result.word))
-    else:
-        print("Bad> {}".format(result.word))
-
 result = check_word("ĉirkaŭiris")
-good_or_bad(result)
+if result.valid:
+    print("OK> {}".format(result.word))
+else:
+    print("Bad> {}".format(result.word))
 
 result = check_word("ĉirkaŭirs")
-good_or_bad(result)
+if result.valid:
+    print("OK> {}".format(result.word))
+else:
+    print("Bad> {}".format(result.word))
 
 result = analyze_string(TEXT, True)
 print(result)
