@@ -1,62 +1,118 @@
 # Literumilo - A spell checker and morphological analyzer for Esperanto.
 
-This program analyzes individual Esperanto words, or an entire file of Esperanto text.
+Literumilo checks the spelling of Esperanto words, and divides them into morphemes. For example, 'miskomprenita' is divided as 'mis.kompren.it.a'.
+
+Literumilo can analyze individual Esperanto words, or an entire file of Esperanto text.
 
 ## Requirements
 
 Literumilo was developed and tested on Python 3.7 .
 
+## Links
+
+Github: [https://github.com/Indrikoterio/literumilo-python](https://github.com/Indrikoterio/literumilo-python)
+
+PyPi: [https://pypi.org/project/literumilo/1.0.5/](https://pypi.org/project/literumilo/1.0.5/)
+
+## Installation
+
+This works for me:
+
+```
+$ python3 -m pip install literumilo
+```
+
 ## Usage
 
-To run literumilo from the command line, type the word or file to analyze after the program name. For example,
-to analyze the word 'kafejo', run the command:
+### Importing
 
-$ `python3 literumilo.py kafejo`
-
-The program will print out the word 'kafejo', divided into morphemes, and a check mark:
-
-`kaf.ej.o ✓`
-
-If the word is misspelled, for example 'kafeyo', the program will print an X: `✘kafeyo`
-
-To check the spelling in a file, eg. 'likaono.txt', enter the command:
-
-$ `python3 literumilo.py likaono.txt`
-
-Literumilo will print a list of unknown words to standard out:
-
-Lycaon  
-mezgrandajnd  
-habitatoj  
-pictus  
-Canis  
-kanisedo  
-jdaroj  
-
-Literumilo has a morphological analysis option: -m. Run the command as below:
-
-$ `python3 literumilo.py -m likaono.txt`
-
-The program will output the text to standard out, with known Esperanto words divided into morphemes. For example:
-
-Ĝi est.as unik.a kanisedo, nom.e la unu.nur.a speci.o en la genr.o likaon.o. Ĝi est.as plej proksim.e rilat.a al la genr.o Canis, kvankam ĝi ne pov.as inter.re.produkt.iĝ.i kun ili. Ĝi est.as frukt.o.don.a re.produkt.ul.o, kun grand.aj jdaroj de ĝis 19 likaon.id.oj, kaj pov.as re.produkt.iĝ.i je iu ajn epok.o de la jar.o. La re.produkt.ad.o est.as kutim.e lim.ig.it.a al la alf.a par.o.
-
-## Tests
-
-To run unit tests, run the following commands:
-
-$ `cd literumilo`  
-$ `python3 -m unittest tests/test_literumilo.py`  
-
-The output should be:
+In your Python program, you can import the module simply as shown here:
 
 ```
-..
-----------------------------------------------------------------------
-Ran 2 tests in 0.002s
-
-OK
+import literumilo
 ```
+
+Using the above method, literumilo's functions must be prefixed with the package name, as below:
+
+```
+result = literumilo.check_word("ĉirkaŭiris")
+```
+
+Alternatively, you can import the function names directly:
+
+```
+from literumilo import x_to_accent
+from literumilo import check_word
+from literumilo import analyze_string
+from literumilo import analyze_file
+```
+
+The code samples below assume that the second method has been used:
+
+### x\_to\_accent
+
+This function converts from the 'x method' to Unicode accented letters. For example, the following line:
+
+```
+print(x_to_accent("cxirkaux"))
+```
+
+prints out `ĉirkaŭ`.
+
+### check_word
+
+The function check_word checks the spelling of an Esperanto word, and divides it into morphemes, if it is valid. It returns a class, AnalysisResult, with two attributes, 'word' and 'valid' (valid is boolean). For example:
+
+```
+result = check_word("ĉirkaŭiris")
+if result.valid:
+    print("OK> {}".format(result.word))
+else:
+    print("Bad> {}".format(result.word))
+```
+
+The above code will print out `OK> ĉirkaŭ.ir.is`.
+
+### analyze_string
+
+This function has two modes, morpheme mode and spell checker mode. The first parameter is the string to analyze. The second is the mode. When the mode is True, analyze_string will divide every Esperanto word in the string into morphemes, and return the new string. For example:
+
+```
+TEXT = "Birdoj (Aves) estas klaso de vertebruloj kun ĉirkaŭ 9 ĝis 10 mil vivantaj specioj."
+result = analyze_string(TEXT, True)
+print(result)
+```
+
+The above will print out
+
+```
+Bird.oj (Aves) est.as klas.o de vertebr.ul.oj kun ĉirkaŭ 9 ĝis 10 mil viv.ant.aj speci.oj
+```
+
+When the morpheme mode is False, analyze_string outputs a list of unknown words. This code,
+
+```
+TEXT = "Birdoj (Aves) estas klaso de vertebruloj kun ĉirkaŭ 9 ĝis 10 mil vivantaj specioj."
+result = analyze_string(TEXT, False)
+print(result)
+```
+
+will print out:
+
+```
+Aves
+```
+
+### analyze_file
+
+The function analyze\_file simply reads a file into a string, and calls analyze\_string. For example:
+
+```
+result = analyze_file(file_path, True)
+print(result)
+```
+
+The second parameter is the mode - the same as analyze_string's mode parameter.
 
 ## Developer
 
