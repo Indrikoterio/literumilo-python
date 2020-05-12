@@ -8,7 +8,7 @@ with open("README.md", "r") as fin:
 
 setuptools.setup(
     name = "literumilo",
-    version = "1.0.4",
+    version = "1.0.5",
     author = "Cleve (Klivo) Lendon",
     author_email = "indriko@yahoo.com",
     description = "A spell checker and morphological analyzer for Esperanto.",
