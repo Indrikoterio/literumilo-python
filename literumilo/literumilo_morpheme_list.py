@@ -4,11 +4,11 @@
 # This file is a list of morphemes for the Esperanto spell checker.
 #
 # Author: Klivo Lendon
-# Last edit date: 2020-05-03
+# Last edit date: 2020-05-17
 
 class MorphemeList:
     """The list of morphemes contains up to 9 dictionary entries,
-    an index to the last entry, and the words ending.
+    an index to the last entry, and the word's ending.
     """
 
     MAX_MORPHEMES = 9    # The maximum number of morphemes in a compound word.
