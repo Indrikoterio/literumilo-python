@@ -2518,10 +2518,13 @@ di	SUBST	PERSONO	N	N	KF	N	1	R
 di	TEHXPREFIKSO	N	N	N	N	P	3	X
 di.acx	SUBST	PERSONO	N	N	KF	N	4	K
 di.ajx	SUBST	N	N	N	KF	N	4	K
+di.donac	SUBST	N	N	N	KF	N	4	K
 di.ec	ADJ	N	N	N	KF	N	3	K
 di.favor	SUBST	N	N	N	KF	N	4	K
 di.in	SUBST	PERSONO	N	N	KF	N	1	K
+di.mal.am.ant	SUBST	PERSONO	N	N	KF	N	3	K
 di.o.tim	SUBSTVERBO	N	N	N	KF	N	4	K
+di.posed.at	ADJ	N	N	N	KF	N	4	K
 di.serv	SUBST	N	N	N	KF	NLM	2	K
 di.tim	SUBSTVERBO	N	N	N	KF	N	4	K
 diabet	SUBST	MALSANO	N	N	KF	NLM	3	R
@@ -4576,6 +4579,7 @@ intenc	VERBO	N	T	N	KF	NLM	1	R
 intendant	SUBST	POSTENO	N	N	KF	NLM	3	R
 intens	ADJ	N	N	N	KF	NLM	2	R
 inter	PREPOZICIO	N	N	SF	KF	P	0	R
+inter.kun.igx	VERBO	N	N	N	KF	LM	4	K
 inter.ret	SUBST	N	N	N	KF	NLM	2	K
 inter.val	SUBST	N	N	N	KF	NLM	3	K
 interdikt	SUBST	N	N	N	KF	NLM	3	R
@@ -4706,6 +4710,7 @@ jube	SUBST	N	N	N	KF	NLM	4	R
 jubil	VERBO	N	N	N	KF	NLM	4	R
 jubile	SUBST	N	N	N	KF	NLM	2	R
 jud	SUBST	ETNO	N	N	KF	LM	2	R
+jud.ism	SUBST	RELIGIO	N	N	KF	LM	3	K
 juft	SUBST	N	N	N	KF	NLM	4	R
 jug	SUBSTVERBO	ILO	T	N	KF	NLM	3	R
 jugland	SUBST	NUKSO	N	N	KF	NLM	3	R
@@ -10107,6 +10112,7 @@ trans	PREPOZICIO	N	N	SF	KF	P	0	R
 trans.alp	ADJ	MONTARO	N	N	KF	N	4	K
 trans.form	VERBO	N	T	N	KF	NLM	2	K
 trans.ir	VERBO	N	T	N	KF	LM	0	K
+trans.jordan	SUBST	REGIONO	N	N	KF	LM	4	K
 trans.mutaci	SUBST	N	N	N	KF	NLM	4	K
 trans.river.an	SUBST	PERSONO	N	N	KF	N	4	K
 transakci	SUBST	N	N	N	KF	NLM	3	R
