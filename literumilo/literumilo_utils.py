@@ -4,7 +4,7 @@
 # This module contains a few utility functions for the Esperanto spell checker 'literumilo'.
 #
 # Author: Klivo Lendon
-# Last edit date: 2020-05-01
+# Last edit date: 2020-11-11
 #
 
 def accepts_hat(letter):
