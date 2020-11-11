@@ -12,7 +12,7 @@ Literumilo was developed and tested on Python 3.7 .
 
 Github: [https://github.com/Indrikoterio/literumilo-python](https://github.com/Indrikoterio/literumilo-python)
 
-PyPi: [https://pypi.org/project/literumilo/1.0.7/](https://pypi.org/project/literumilo/1.0.7/)
+PyPi: [https://pypi.org/project/literumilo/1.0.8/](https://pypi.org/project/literumilo/1.0.8/)
 
 ## Installation
 
