@@ -110,11 +110,19 @@ def restore_capitals(original, analyzed):
     """
     result = ""
     index = 0
+    original_length = len(original)
+    # Note: Sometimes a single accented capital letter becomes two codes
+    # when converted to lower case. In other words, length of the analyzed
+    # word is longer than the original. To avoid an 'out of range' error, when
+    # restoring capitals, the index must be compared with the original length.
     for ch in analyzed:
         if ch == ".":
             result += "."
         else:
-            result += original[index]
+            if (index < original_length):
+                result += original[index]
+            else:
+                result += ch
             index += 1
     return result
 # end of restore_capitals
